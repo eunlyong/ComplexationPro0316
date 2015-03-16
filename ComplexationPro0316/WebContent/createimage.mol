@@ -1,0 +1,199 @@
+%!PS-Adobe-2.0
+%%Creator: mol2ps 0.4b,  Norbert Haider, University of Vienna, 2014
+%%Title: D://JavaProNew//SemanticHost//gueststructure.mol
+% the following settings were used:
+% font: Helvetica 14 pt (9 pt for subscripts)
+% line width: 1.0
+% automatic rotation: 
+%      0.00� around X axis
+%      0.00� around Y axis
+%      0.00� around Z axis
+% automatic scaling: on
+% molecule scaled by 1.46748
+% stripping of explicit hydrogens: on
+% hydrogen on hetero atoms: on
+% print molecule name above structure: off
+
+% for manual (re-)scaling, please edit the following line:
+  1.00 1.00 scale
+
+gsave
+/dot {.24 mul} def
+0 0 0 setrgbcolor
+1.0 setlinewidth
+1 setlinecap
+1 setlinejoin
+/fs1 14 def
+/fs2 9 def
+/fs3 12 def
+/CFont { /Helvetica findfont fs1 scalefont setfont } def
+/CFontSub { /Helvetica findfont fs2 scalefont setfont } def
+/CFontChg { /Courier-Bold findfont fs3 scalefont setfont } def
+/Minus { (-) show } def
+/Rad1 { (:) show } def
+/Rad2 { (\267) show } def
+/Rad3 { /Helvetica-Bold findfont fs3 1.4 div scalefont setfont (^^) show } def
+
+/bb {
+1.00 1.00 1.00 setrgbcolor
+CFont
+newpath X dot Y dot moveto
+anchor stringwidth pop 2 div 0.8 add neg 0 rmoveto
+0 fs1 2.5 div 0.8 add neg rmoveto
+0 fs1 2.5 div 2 mul 1.6 add rlineto
+anchor stringwidth pop 1.6 add 0 rlineto
+0 fs1 2.5 div 2 mul 1.6 add neg rlineto
+closepath fill
+0 0 0 setrgbcolor
+X dot Y dot moveto
+} bind def
+
+/bbx {
+1.00 1.00 1.00 setrgbcolor
+CFont
+newpath X dot Y dot moveto
+anchor stringwidth pop 2 div 0.8 add neg 0 rmoveto
+0 fs1 2.5 div neg rmoveto
+0 fs1 2.5 div 2 mul rlineto
+anchor stringwidth pop 1.6 add 0 rlineto
+0 fs1 6 div rlineto
+fs1 2 div 0 rlineto
+0 fs1 2 div neg rlineto
+fs1 2 div neg 0 rlineto
+0 fs1 2 div neg rlineto
+closepath fill
+0 0 0 setrgbcolor
+X dot Y dot moveto
+} bind def
+
+402 dot 883 dot moveto 319 dot 930 dot lineto
+417 dot 895 dot moveto 322 dot 950 dot lineto
+227 dot 895 dot moveto 322 dot 950 dot lineto
+245 dot 792 dot moveto 245 dot 887 dot lineto
+227 dot 784 dot moveto 227 dot 895 dot lineto
+417 dot 784 dot moveto 417 dot 895 dot lineto
+322 dot 729 dot moveto 227 dot 784 dot lineto
+319 dot 749 dot moveto 402 dot 797 dot lineto
+322 dot 729 dot moveto 417 dot 784 dot lineto
+417 dot 124 dot moveto 417 dot 234 dot lineto
+517 dot 281 dot moveto 422 dot 226 dot lineto
+508 dot 297 dot moveto 413 dot 242 dot lineto
+322 dot 289 dot moveto 417 dot 234 dot lineto
+322 dot 619 dot moveto 322 dot 729 dot lineto
+322 dot 289 dot moveto 227 dot 234 dot lineto
+stroke
+/X {227} def
+/Y {234} def
+/anchor (C) def
+bb
+322 dot 619 dot moveto 417 dot 564 dot lineto
+399 dot 462 dot moveto 399 dot 557 dot lineto
+417 dot 454 dot moveto 417 dot 564 dot lineto
+131 dot 619 dot moveto 227 dot 564 dot lineto
+325 dot 600 dot moveto 242 dot 552 dot lineto
+322 dot 619 dot moveto 227 dot 564 dot lineto
+227 dot 454 dot moveto 227 dot 564 dot lineto
+322 dot 399 dot moveto 417 dot 454 dot lineto
+325 dot 419 dot moveto 242 dot 466 dot lineto
+322 dot 399 dot moveto 227 dot 454 dot lineto
+322 dot 289 dot moveto 322 dot 399 dot lineto
+stroke
+/X {513} def
+/Y {289} def
+/anchor (O) def
+bb
+stroke
+/X {417} def
+/Y {124} def
+/anchor (O) def
+bb
+stroke
+/X {131} def
+/Y {619} def
+/anchor (F) def
+bb
+stroke
+CFont
+131 dot 598 dot moveto
+(F) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+131 dot 598 dot moveto
+(F) stringwidth pop
+2 div neg 0 rmoveto
+(F) show
+417 dot 103 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+417 dot 103 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+(O) show
+(H) show
+513 dot 268 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+513 dot 268 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+(O) show
+227 dot 213 dot moveto
+(C) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+227 dot 213 dot moveto
+(C) stringwidth pop
+2 div neg 0 rmoveto
+(C) show
+227 dot 213 dot moveto
+(C) stringwidth pop
+2 div neg 0 rmoveto
+CFontSub
+(3) stringwidth pop
+neg 0 rmoveto
+CFont
+(H) stringwidth pop
+neg 0 rmoveto
+(H) show
+0 fs2 neg dot rmoveto CFontSub
+(3) show
+0 fs2 dot rmoveto CFontSub
+
+showpage
+
+% appendix: actual & original XY coordinates ("dots", Angstroms)
+%   atom   1:  131  619   F     2.0000   0.9050 
+%   atom   2:  417  124   O     4.5981  -3.5950 
+%   atom   3:  513  289   O     5.4641  -2.0950 
+%   atom   4:  322  289   C     3.7320  -2.0950 
+%   atom   5:  322  399   C     3.7320  -1.0950 
+%   atom   6:  322  619   C     3.7320   0.9050 
+%   atom   7:  227  454   C     2.8660  -0.5950 
+%   atom   8:  417  454   C     4.5981  -0.5950 
+%   atom   9:  227  564   C     2.8660   0.4050 
+%   atom  10:  417  564   C     4.5981   0.4050 
+%   atom  11:  227  234   C     2.8660  -2.5950 
+%   atom  12:  322  729   C     3.7320   1.9050 
+%   atom  13:  417  234   C     4.5981  -2.5950 
+%   atom  14:  417  784   C     4.5981   2.4050 
+%   atom  15:  227  784   C     2.8660   2.4050 
+%   atom  16:  417  895   C     4.5981   3.4050 
+%   atom  17:  227  895   C     2.8660   3.4050 
+%   atom  18:  322  950   C     3.7320   3.9050 
+%   atom  19:  322  196   H /   3.7320  -2.9450 
+%   atom  20:  167  420   H /   2.3291  -0.9050 
+%   atom  21:  476  420   H /   5.1350  -0.9050 
+%   atom  22:  476  598   H /   5.1350   0.7150 
+%   atom  23:  192  293   H /   2.5560  -2.0581 
+%   atom  24:  167  200   H /   2.3291  -2.9050 
+%   atom  25:  261  175   H /   3.1760  -3.1319 
+%   atom  26:  476  750   H /   5.1350   2.0950 
+%   atom  27:  167  750   H /   2.3291   2.0950 
+%   atom  28:  476  929   H /   5.1350   3.7150 
+%   atom  29:  167  929   H /   2.3291   3.7150 
+%   atom  30:  322 1018   H /   3.7320   4.5250 
+%   atom  31:  476   90   H /   5.1350  -3.9050 
+% ----------------------end of image------------------------
+
