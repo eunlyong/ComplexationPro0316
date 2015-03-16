@@ -772,7 +772,8 @@ public class Dao {
 		
 		propertyValue += " complexation:" + guestName
 				+ " rdf:type complexation:guest. ";
-
+		propertyValue += " complexation:" + guestName
+				+ " complexation:has_name \"" + guestName + "\"^^xsd:string. ";
 		String insert_sparql = Variables.prefix + " INSERT DATA{ "
 				+ molid_sparql + molstruc_sparql + molstat_sparql
 				+ molfgb_sparql + molcfp_sparql + propertyValue + " }";

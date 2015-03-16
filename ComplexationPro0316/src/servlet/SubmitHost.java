@@ -134,6 +134,7 @@ public class SubmitHost extends HttpServlet {
 			sparqlpart1 += " complexation:" + host + " "  + hostproperty.split(",")[i] + " " + hostvalue.split(",")[i] + ". ";
 		}
 		sparqlpart1 += "complexation:" + host  + " rdf:type complexation:host. ";
+		sparqlpart1 += "complexation:" + host  + " complexation:has_name \"" + host + "\"^^xsd:string. ";
 		sparqlpart1 += hostmonoinfo;
 		System.out.println(sparqlpart1);
 		String sparqlpart2="";

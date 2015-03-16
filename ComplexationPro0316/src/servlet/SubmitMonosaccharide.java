@@ -47,6 +47,7 @@ public class SubmitMonosaccharide extends HttpServlet {
 		String monosaccharideproperty = "";
 		String monosaccharidevalue = "";
 		String monosacchardie = "";
+		String monosaccharideName = "";
 		String basetype = "";
 		request.setCharacterEncoding("utf-8"); 
 		response.setContentType("text/html;charset=utf-8"); 
@@ -77,7 +78,8 @@ public class SubmitMonosaccharide extends HttpServlet {
 					}else if(item.getFieldName().equals("monosaccharidevalue")){
 						monosaccharidevalue = item.getString().toLowerCase();
 					}else if(item.getFieldName().equals("monosaccharide")){
-						monosacchardie = "complexation:" + item.getString().toLowerCase();
+						monosaccharideName = item.getString().toLowerCase();
+						monosacchardie = "complexation:" + monosaccharideName;
 					}else if(item.getFieldName().equals("basetype")){
 						basetype =  "complexation:" + item.getString().toLowerCase();
 					}
@@ -159,7 +161,7 @@ public class SubmitMonosaccharide extends HttpServlet {
 			
 			//sparqlpart1 += " complexation:" + host + " complexation:has_nmr_spectrum \"" + fileName + "\"^^xsd:string. ";
 		sparqlpart1 += monosacchardie + " rdf:type glycan:monosaccharide. " + basetype + " rdf:type glycan:basetype. ";	
-		 
+		sparqlpart1 += monosacchardie + " complexation:has_name \"" + monosaccharideName + "\"^^xsd:string. ";
 		//String sparqlpart1 = " complexation:" + host + " complexation:has_nmr_spectrum \"" + fileName + "\"^^xsd:string. ";
 		String queryString = Variables.prefix + " Insert Data {" + sparqlpart1  + " }" ;
 	
