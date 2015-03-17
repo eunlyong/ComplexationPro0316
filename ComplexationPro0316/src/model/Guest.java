@@ -4,9 +4,9 @@ public class Guest {
 	public String guest;
 	public String molId;
 	public String structure;
-	public Molcfp molcfp;
-	public Molfgb molfgb;
-	public Molstat molstat;
+	public String molcfp;
+	public String molfgb;
+	public String molstat;
 	public int diffsum;
 	
 	public String canonicalized;
@@ -41,20 +41,18 @@ public class Guest {
 	public String tautoCount;
 	public String coordinateType;
 	public String bondAnnotations;
-	
-	
 	public Guest() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Guest(String guest, String molId, String structure, Molcfp molcfp,
-			Molfgb molfgb, Molstat molstat, int diffsum, String canonicalized,
-			String complexity, String hbondAcceptor, String hbondDonor,
-			String rotatableBond, String subskeys, String iupacOpeneyeName,
-			String iupacCasName, String iupacName, String systematicName,
-			String iupacTraditionalName, String iupacInchi,
-			String iupacInchiKey, String xlogp3_AA, String exactMass,
-			String molecularFormular, String molecularWeight,
+	public Guest(String guest, String molId, String structure,
+			String molcfp, String molfgb, String molstat, int diffsum,
+			String canonicalized, String complexity, String hbondAcceptor,
+			String hbondDonor, String rotatableBond, String subskeys,
+			String iupacOpeneyeName, String iupacCasName, String iupacName,
+			String systematicName, String iupacTraditionalName,
+			String iupacInchi, String iupacInchiKey, String xlogp3_AA,
+			String exactMass, String molecularFormular, String molecularWeight,
 			String openeyeCanSmiles, String openeyeIsoSmiles, String tpas,
 			String monoisotopicWeight, String totalCharge,
 			String heavyAtomCount, String atomDefStereoCount,
@@ -121,22 +119,22 @@ public class Guest {
 	public void setStructure(String structure) {
 		this.structure = structure;
 	}
-	public Molcfp getMolcfp() {
+	public String getMolcfp() {
 		return molcfp;
 	}
-	public void setMolcfp(Molcfp molcfp) {
+	public void setMolcfp(String molcfp) {
 		this.molcfp = molcfp;
 	}
-	public Molfgb getMolfgb() {
+	public String getMolfgb() {
 		return molfgb;
 	}
-	public void setMolfgb(Molfgb molfgb) {
+	public void setMolfgb(String molfgb) {
 		this.molfgb = molfgb;
 	}
-	public Molstat getMolstat() {
+	public String getMolstat() {
 		return molstat;
 	}
-	public void setMolstat(Molstat molstat) {
+	public void setMolstat(String molstat) {
 		this.molstat = molstat;
 	}
 	public int getDiffsum() {

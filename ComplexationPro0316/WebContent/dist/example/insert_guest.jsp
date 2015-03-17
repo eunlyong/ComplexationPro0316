@@ -88,9 +88,7 @@
 									onClick="sendGuestName('<%=basePath%>')">Submit SDF File</button>
 									</td>
 								</tr>
-							</table>
-							</td>
-						</tr>
+							
 					<%
 						if (request.getAttribute("guestFile") != null) {
 							
@@ -121,6 +119,9 @@
 
 						}
 					%>
+					</table>
+							</td>
+						</tr>
 					</tbody>
 					</table>
                 </div>

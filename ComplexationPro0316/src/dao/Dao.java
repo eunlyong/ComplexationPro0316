@@ -724,26 +724,31 @@ public class Dao {
 		// insert stat info to molstat
 
 		String molstat_sparql = " complexation:" + guestName
-				+ " complexation:has_molstat _:molstat. ";
-		for (int i = 0; i < molstat.split(",").length; i++) {
-			molstat_sparql += " _:molstat "
-					+ Variables.molstatTable.split(",")[i] + " \""
-					+ molstat.split(",")[i] + "\"^^xsd:integer. ";
-		}
+				+ " complexation:has_molstat \"" + molstat + "\"^^xsd:string. ";
+//		String molstat_sparql = " complexation:" + guestName
+//				+ " complexation:has_molstat _:molstat. ";
+//		for (int i = 0; i < molstat.split(",").length; i++) {
+//			molstat_sparql += " _:molstat "
+//					+ Variables.molstatTable.split(",")[i] + " \""
+//					+ molstat.split(",")[i] + "\"^^xsd:integer. ";
+//		}
 
 		// insert fgb info to molfgb
 
 		String molfgb_sparql = " complexation:" + guestName
-				+ " complexation:has_molfgb _:molfgb. ";
-		molfgb.replaceAll(";", ",");
-		System.out.println(molfgb);
-		for (int i = 0; i < molfgb.split(";")[0].split(",").length; i++) {
-			molfgb_sparql += " _:molfgb " + Variables.molfgbTable.split(",")[i]
-					+ " \"" + molfgb.split(";")[0].split(",")[i]
-					+ "\"^^xsd:string. ";
-		}
-		molfgb_sparql += " _:molfgb " + Variables.molfgbTable.split(",")[8]
-				+ " \"" + molfgb.split(";")[1] + "\"^^xsd:integer. ";
+				+ " complexation:has_molfgb \"" + molfgb + "\"^^xsd:string. ";
+		
+//		String molfgb_sparql = " complexation:" + guestName
+//				+ " complexation:has_molfgb _:molfgb. ";
+//		molfgb.replaceAll(";", ",");
+//		System.out.println(molfgb);
+//		for (int i = 0; i < molfgb.split(";")[0].split(",").length; i++) {
+//			molfgb_sparql += " _:molfgb " + Variables.molfgbTable.split(",")[i]
+//					+ " \"" + molfgb.split(";")[0].split(",")[i]
+//					+ "\"^^xsd:string. ";
+//		}
+//		molfgb_sparql += " _:molfgb " + Variables.molfgbTable.split(",")[8]
+//				+ " \"" + molfgb.split(";")[1] + "\"^^xsd:integer. ";
 
 		// insert cfp info molcfp
 		// -F: fingerprint mode with decimal output
@@ -753,17 +758,23 @@ public class Dao {
 
 		// value should add " " then insert
 		String moldfp = " " + readline2;
-		String molcfp_sparql = " complexation:" + guestName
-				+ " complexation:has_molcfp _:molcfp. ";
+		
 		String molcfp = moldfp + "," + molhfp;
-		for (int i = 0; i < molcfp.split(";")[0].split(",").length; i++) {
-			molcfp_sparql += " _:molcfp " + Variables.molcfpTable.split(",")[i]
-					+ " \""
-					+ molcfp.split(";")[0].split(",")[i].replace(" ", "")
-					+ "\"^^xsd:string. ";
-		}
-		molcfp_sparql += " _:molcfp " + Variables.molcfpTable.split(",")[17]
-				+ " \"" + molcfp.split(";")[1] + "\"^^xsd:string. ";
+		String molcfp_sparql = " complexation:" + guestName
+				+ " complexation:has_molcfp \"" + molcfp + "\"^^xsd:string. ";
+		
+//		String moldfp = " " + readline2;
+//		String molcfp_sparql = " complexation:" + guestName
+//				+ " complexation:has_molcfp _:molcfp. ";
+//		String molcfp = moldfp + "," + molhfp;
+//		for (int i = 0; i < molcfp.split(";")[0].split(",").length; i++) {
+//			molcfp_sparql += " _:molcfp " + Variables.molcfpTable.split(",")[i]
+//					+ " \""
+//					+ molcfp.split(";")[0].split(",")[i].replace(" ", "")
+//					+ "\"^^xsd:string. ";
+//		}
+//		molcfp_sparql += " _:molcfp " + Variables.molcfpTable.split(",")[17]
+//				+ " \"" + molcfp.split(";")[1] + "\"^^xsd:string. ";
 
 		// Value for Properties
 		String propertyValue =  guestPropertiesFromPubChem( guestName,guestinfo);
@@ -778,7 +789,7 @@ public class Dao {
 				+ molid_sparql + molstruc_sparql + molstat_sparql
 				+ molfgb_sparql + molcfp_sparql + propertyValue + " }";
 		System.out.println("GuestIntoJena: " + insert_sparql);
-		jena.insertDataIntoJena(insert_sparql);
+		//jena.insertDataIntoJena(insert_sparql);
 	}
 
 	public void createGuestStructureInPNG(String guestfile, String molid)
@@ -835,27 +846,41 @@ public class Dao {
 		int a_sum_dfp = Long.bitCount(Long.parseLong(bfpnum));
 		System.out.println("A Sum dfp: " + a_sum_dfp);
 		String querypart_1 = "";
-		for (int j = 0; j < chkresult1a.split(";").length; j++) {
-			querypart_1 += "(?"
-					+ chkresult1a.split(";")[j].replace(":", " - ")
-							.toLowerCase()
-					+ ") * (?"
-					+ chkresult1a.split(";")[j].replace(":", " - ")
-							.toLowerCase() + ") +";
-		}
-		querypart_1 = querypart_1.substring(0, querypart_1.lastIndexOf("+"));
+//		for (int j = 0; j < chkresult1a.split(";").length; j++) {
+//			querypart_1 += "(?"
+//					+ chkresult1a.split(";")[j].replace(":", " - ")
+//							.toLowerCase()
+//					+ ") * (?"
+//					+ chkresult1a.split(";")[j].replace(":", " - ")
+//							.toLowerCase() + ") +";
+//		}
+//		querypart_1 = querypart_1.substring(0, querypart_1.lastIndexOf("+"));
+	
+		
+		System.out.println("chkresult1a : ==== " + chkresult1a);
+//		String querypart = Variables.prefix
+//				+ Variables.calcGuestMolstatDiffsum_1 + querypart_1
+//				+ Variables.calcGuestMolstatDiffsum_2;
 
-		String querypart = Variables.prefix
-				+ Variables.calcGuestMolstatDiffsum_1 + querypart_1
-				+ Variables.calcGuestMolstatDiffsum_2;
-
+//		String querypart = Variables.prefix + " select distinct ?mol_id  (SUM( " + querypart_1
+//				+ ") as  ?diffsum) where {"
+//				+ " ?guest complexation:has_mol_id ?mol_id. "
+//				+ " ?guest complexation:has_molstat ?molstat. } "
+//				+ " GROUP BY ?mol_id ORDER BY (?diffsum) LIMIT 100  ";
+		
+		String querypart = Variables.prefix + " select distinct ?mol_id  ?molstat where {"
+				+ " ?guest complexation:has_mol_id ?mol_id. "
+				+ " ?guest complexation:has_molstat ?molstat. } "
+				+ " GROUP BY ?mol_id  LIMIT 100  ";
+		
 		ArrayList<Guest> guestlist = new ArrayList<Guest>();
-		Molstat molstat = new Molstat();
-		jena.searchDataFromJena(molstat, guestlist, querypart);
+		//Molstat molstat = new Molstat();
+		guestlist = jena.searchDataFromJena(1, querypart);
 
 		String c_qstr1 = "select *  {  "
-				+ "  ?guest complexation:has_molcfp _:molcfp. "
-				+ " ?guest complexation:has_mol_id ";
+				+ "  ?guest complexation:has_molcfp ?molcfp. "
+				+ "  ?guest complexation:has_molfgb ?molfgb. "
+				+ "  ?guest complexation:has_mol_id ";
 
 		// Get all guest in complexation (tanimoto score > minimum score [now it
 		// is 0.1]),
@@ -863,86 +888,103 @@ public class Dao {
 
 		for (int i = 0; i < guestlist.size(); i++) {
 			String mol_id = guestlist.get(i).getMolId();
-			int diffsum = guestlist.get(i).getDiffsum();
-			System.out.println("Mol Id & Diffsum: " + mol_id + " & " + diffsum);
-			String c_qstr = Variables.prefix + c_qstr1 + " \"" + mol_id
-					+ "\"^^xsd:string. " + Variables.guestMolcfp_1
-					+ Variables.guestMolfgb_1 + Variables.guestMolfgb_2;
-			Molcfp molcfp = new Molcfp();
-			String dfp01 = "";
+			
+			if(null != guestlist.get(i).getMolstat()){
+				String molstat = guestlist.get(i).getMolstat();
+				int diffsum = 0;
+				for (int j = 0; j < chkresult1a.split(";").length; j++) {
+					diffsum += 
+							Integer.parseInt(molstat.split(",")[j].trim())
+							- Integer.parseInt(chkresult1a.split(";")[j].split(":")[1].trim());
+				}
+				
+				
+				
+				System.out.println("Mol Id & Diffsum: " + mol_id + " & " + diffsum);
+//				String c_qstr = Variables.prefix + c_qstr1 + " \"" + mol_id
+//						+ "\"^^xsd:string. " + Variables.guestMolcfp_1
+//						+ Variables.guestMolfgb_1 + Variables.guestMolfgb_2;
+				
+				String c_qstr = Variables.prefix + c_qstr1 + " \"" + mol_id
+						+ "\"^^xsd:string. }";
+				Molcfp molcfp = new Molcfp();
+				String dfp01 = "";
 
-			Complexation complexation = jena.searchDataFromJena(c_qstr);
-			String guestName = complexation.getGuest().getGuest();
-			dfp01 = complexation.getGuest().getMolcfp().getDfp01();
+				Complexation complexation = jena.searchDataFromJena(c_qstr);
+				String guestName = complexation.getGuest().getGuest();
+				dfp01 = complexation.getGuest().getMolcfp().split(",")[0];
 
-			long n1 = 0, n2 = 0, n3 = 0;
-			int a = 0, b = 0, c = 0;
-			int a_sum = 0, b_sum = 0, c_sum = 0;
-			int b_sum_fg = 0, c_sum_fg = 0;
-			String[] hfp = new String[16];
-			hfp = complexation.getGuest().getMolcfp().getHfp16();
-			for (int k = 0; k < 16; k++) {
-				n1 = Long.parseLong(hfparr[k].replace(" ", ""));
-				n2 = Long.parseLong(hfp[k].replace(" ", "") + "");
-				n3 = n1 & n2;
+				long n1 = 0, n2 = 0, n3 = 0;
+				int a = 0, b = 0, c = 0;
+				int a_sum = 0, b_sum = 0, c_sum = 0;
+				int b_sum_fg = 0, c_sum_fg = 0;
+				String[] hfp = new String[16];
+				String hfpStr = complexation.getGuest().getMolcfp();
+				hfp = hfpStr.split(";")[0].substring( hfpStr.indexOf(",") + 1).split(",");
+				for (int k = 0; k < 16; k++) {
+					n1 = Long.parseLong(hfparr[k].replace(" ", ""));
+					n2 = Long.parseLong(hfp[k].replace(" ", "") + "");
+					n3 = n1 & n2;
 
-				a = count1bits(n1);
-				b = count1bits(n2);
-				c = count1bits(n3);
+					a = count1bits(n1);
+					b = count1bits(n2);
+					c = count1bits(n3);
 
-				a_sum += a;
-				b_sum += b;
-				c_sum += c;
+					a_sum += a;
+					b_sum += b;
+					c_sum += c;
+
+				}
+
+				a_sum += a_sum_dfp;
+
+				int c_dfp = Long.bitCount(bitwiseAnd(Long.parseLong(dfp01.trim()),
+						Long.parseLong(bfpnum.trim())));
+				int b_dfp = Long.bitCount(Long.parseLong(dfp01.trim()));
+
+				c_sum += c_dfp;
+				b_sum += b_dfp;
+
+				String[] fg = chkresult1b.split(";")[0].split(",");
+				int a_sum_fg = Integer.parseInt(chkresult1b.split(";")[1]);
+
+				String[] fgarr = new String[8];
+				fgarr = complexation.getGuest().getMolfgb().split(";")[0].split(",");
+
+				int c_fg = 0, b_fg = 0;
+
+				for (int n = 0; n < fg.length; n++) {
+					c_fg += Long.bitCount(bitwiseAnd(Long.parseLong(fgarr[n]),
+							Long.parseLong(fg[n])));
+					b_fg += Long.bitCount(Long.parseLong(fgarr[n]));
+				}
+
+				c_sum_fg += c_fg;
+				b_sum_fg += b_fg;
+				double tanimoto_s = 0;
+				if (a_sum + b_sum - c_sum > 0) {
+					tanimoto_s = (double) c_sum / (a_sum + b_sum - c_sum);
+				}
+				double tanimoto_f = 0;
+				if (a_sum_fg + b_sum_fg - c_sum_fg > 0) {
+					tanimoto_f = (double) c_sum_fg
+							/ (a_sum_fg + b_sum_fg - c_sum_fg);
+
+				}
+				double tanimoto = ssim_wt * (double) tanimoto_s + fsim_wt
+						* (double) tanimoto_f;
+				// double molstat_coefficient = (double) (max_diffsum - diffsum)
+				// / (double) max_diffsum;
+				// tanimoto = tanimoto * molstat_coefficient;
+				System.out.println("Tanimoto: " + tanimoto);
+				if (tanimoto > Variables.MIN_SIMILARIRY) { // Min Similarity =
+
+					String tanimoto4 = String.format("%.1f", tanimoto * 100);
+					hash.put(guestName, Double.parseDouble(tanimoto4));
+				}
 
 			}
-
-			a_sum += a_sum_dfp;
-
-			int c_dfp = Long.bitCount(bitwiseAnd(Long.parseLong(dfp01.trim()),
-					Long.parseLong(bfpnum.trim())));
-			int b_dfp = Long.bitCount(Long.parseLong(dfp01.trim()));
-
-			c_sum += c_dfp;
-			b_sum += b_dfp;
-
-			String[] fg = chkresult1b.split(";")[0].split(",");
-			int a_sum_fg = Integer.parseInt(chkresult1b.split(";")[1]);
-
-			String[] fgarr = new String[8];
-			fgarr = complexation.getGuest().getMolfgb().getFg();
-
-			int c_fg = 0, b_fg = 0;
-
-			for (int n = 0; n < fg.length; n++) {
-				c_fg += Long.bitCount(bitwiseAnd(Long.parseLong(fgarr[n]),
-						Long.parseLong(fg[n])));
-				b_fg += Long.bitCount(Long.parseLong(fgarr[n]));
-			}
-
-			c_sum_fg += c_fg;
-			b_sum_fg += b_fg;
-			double tanimoto_s = 0;
-			if (a_sum + b_sum - c_sum > 0) {
-				tanimoto_s = (double) c_sum / (a_sum + b_sum - c_sum);
-			}
-			double tanimoto_f = 0;
-			if (a_sum_fg + b_sum_fg - c_sum_fg > 0) {
-				tanimoto_f = (double) c_sum_fg
-						/ (a_sum_fg + b_sum_fg - c_sum_fg);
-
-			}
-			double tanimoto = ssim_wt * (double) tanimoto_s + fsim_wt
-					* (double) tanimoto_f;
-			// double molstat_coefficient = (double) (max_diffsum - diffsum)
-			// / (double) max_diffsum;
-			// tanimoto = tanimoto * molstat_coefficient;
-			System.out.println("Tanimoto: " + tanimoto);
-			if (tanimoto > Variables.MIN_SIMILARIRY) { // Min Similarity =
-
-				String tanimoto4 = String.format("%.1f", tanimoto * 100);
-				hash.put(guestName, Double.parseDouble(tanimoto4));
-			}
-
+			
 		}
 		return hash;
 	}

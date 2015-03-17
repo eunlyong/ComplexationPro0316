@@ -3,13 +3,14 @@ package dao;
 public class Variables {
 	public static double MIN_SIMILARIRY = 0;
 	public static String directory = "D:/jena-fuseki-0.2.7/Complexation";
-	public static String GuestImagePath = "D:\\JavaProNew\\ComplexationPro1\\GuestImage\\";
-	public static String HostImagePath = "D:\\JavaProNew\\ComplexationPro1\\HostImage\\";
-	public static String ComplexationImagePath = "D:\\JavaProNew\\ComplexationPro1\\ComplexationImage\\";
+	public static String GuestImagePath = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\GuestImage\\";
+	public static String HostImagePath = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\HostImage\\";
+	public static String ComplexationImagePath = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\ComplexationImage\\";
+	public static String StructureFile = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\gueststructure.mol";
 	
-	
-	public static String ToolLocationPath = "D:\\JavaProNew\\ComplexationPro1\\Tool\\";
-	public static String UsedFilePath = "D:\\JavaProNew\\ComplexationPro1\\";
+	public static String ToolLocationPath = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\Tool\\";
+	public static String UsedFilePath = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\";
+	static String fpchunk = "D:\\Git\\ComplexationDB\\ComplexationPro0316\\ComplexationPro0316\\fpchunk.sdf";
 	
 	public static String prefix = "prefix bibo:    <http://purl.org/ontology/bibo/> "
 			+ "prefix owl:     <http://www.w3.org/2002/07/owl#> "
@@ -52,7 +53,7 @@ public class Variables {
 			+ "PUBCHEM_MONOISOTOPIC_WEIGHT,PUBCHEM_TOTAL_CHARGE,PUBCHEM_HEAVY_ATOM_COUNT,PUBCHEM_ATOM_DEF_STEREO_COUNT,PUBCHEM_ATOM_UDEF_STEREO_COUNT,PUBCHEM_BOND_DEF_STEREO_COUNT,"
 			+ "PUBCHEM_BOND_UDEF_STEREO_COUNT,PUBCHEM_ISOTOPIC_ATOM_COUNT,PUBCHEM_COMPONENT_COUNT,PUBCHEM_CACTVS_TAUTO_COUNT";
 	
-	static String fpchunk = "D:\\Install\\moldb5r20\\fpchunk.sdf";
+	
 
 	String gethostquery = "prefix bibo:    <http://purl.org/ontology/bibo/> "
 			+ "prefix owl:     <http://www.w3.org/2002/07/owl#> "

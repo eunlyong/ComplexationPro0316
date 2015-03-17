@@ -1,6 +1,6 @@
 %!PS-Adobe-2.0
 %%Creator: mol2ps 0.4b,  Norbert Haider, University of Vienna, 2014
-%%Title: D://JavaProNew//SemanticHost//gueststructure.mol
+%%Title: D:\Git\ComplexationDB\ComplexationPro0316\ComplexationPro0316\gueststructure.mol
 % the following settings were used:
 % font: Helvetica 14 pt (9 pt for subscripts)
 % line width: 1.0
@@ -9,7 +9,7 @@
 %      0.00� around Y axis
 %      0.00� around Z axis
 % automatic scaling: on
-% molecule scaled by 1.46748
+% molecule scaled by 1.46855
 % stripping of explicit hydrogens: on
 % hydrogen on hetero atoms: on
 % print molecule name above structure: off
@@ -66,88 +66,140 @@ closepath fill
 X dot Y dot moveto
 } bind def
 
-402 dot 883 dot moveto 319 dot 930 dot lineto
-417 dot 895 dot moveto 322 dot 950 dot lineto
-227 dot 895 dot moveto 322 dot 950 dot lineto
-245 dot 792 dot moveto 245 dot 887 dot lineto
-227 dot 784 dot moveto 227 dot 895 dot lineto
-417 dot 784 dot moveto 417 dot 895 dot lineto
-322 dot 729 dot moveto 227 dot 784 dot lineto
-319 dot 749 dot moveto 402 dot 797 dot lineto
-322 dot 729 dot moveto 417 dot 784 dot lineto
-417 dot 124 dot moveto 417 dot 234 dot lineto
-517 dot 281 dot moveto 422 dot 226 dot lineto
-508 dot 297 dot moveto 413 dot 242 dot lineto
-322 dot 289 dot moveto 417 dot 234 dot lineto
-322 dot 619 dot moveto 322 dot 729 dot lineto
-322 dot 289 dot moveto 227 dot 234 dot lineto
+286 dot 379 dot moveto 190 dot 323 dot lineto
 stroke
-/X {227} def
-/Y {234} def
+/X {190} def
+/Y {323} def
 /anchor (C) def
 bb
-322 dot 619 dot moveto 417 dot 564 dot lineto
-399 dot 462 dot moveto 399 dot 557 dot lineto
-417 dot 454 dot moveto 417 dot 564 dot lineto
-131 dot 619 dot moveto 227 dot 564 dot lineto
-325 dot 600 dot moveto 242 dot 552 dot lineto
-322 dot 619 dot moveto 227 dot 564 dot lineto
-227 dot 454 dot moveto 227 dot 564 dot lineto
-322 dot 399 dot moveto 417 dot 454 dot lineto
-325 dot 419 dot moveto 242 dot 466 dot lineto
-322 dot 399 dot moveto 227 dot 454 dot lineto
-322 dot 289 dot moveto 322 dot 399 dot lineto
+960 dot 612 dot moveto 994 dot 717 dot lineto
 stroke
-/X {513} def
-/Y {289} def
+/X {994} def
+/Y {717} def
+/anchor (C) def
+bb
+1027 dot 524 dot moveto 953 dot 606 dot lineto
+1040 dot 536 dot moveto 967 dot 618 dot lineto
+852 dot 589 dot moveto 960 dot 612 dot lineto
+479 dot 178 dot moveto 396 dot 225 dot lineto
+477 dot 158 dot moveto 381 dot 213 dot lineto
+381 dot 323 dot moveto 381 dot 213 dot lineto
+286 dot 379 dot moveto 381 dot 323 dot lineto
+479 dot 359 dot moveto 396 dot 311 dot lineto
+477 dot 379 dot moveto 381 dot 323 dot lineto
+572 dot 213 dot moveto 477 dot 158 dot lineto
+572 dot 323 dot moveto 477 dot 379 dot lineto
+852 dot 589 dot moveto 818 dot 484 dot lineto
+710 dot 462 dot moveto 818 dot 484 dot lineto
+851 dot 268 dot moveto 740 dot 268 dot lineto
+676 dot 180 dot moveto 740 dot 268 dot lineto
+666 dot 341 dot moveto 722 dot 264 dot lineto
+676 dot 357 dot moveto 740 dot 268 dot lineto
+676 dot 180 dot moveto 572 dot 213 dot lineto
+554 dot 316 dot moveto 554 dot 221 dot lineto
+572 dot 323 dot moveto 572 dot 213 dot lineto
+676 dot 357 dot moveto 710 dot 462 dot lineto
+676 dot 357 dot moveto 572 dot 323 dot lineto
+stroke
+/X {852} def
+/Y {589} def
+/anchor (N) def
+bb
+stroke
+/X {676} def
+/Y {180} def
+/anchor (N) def
+bb
+stroke
+/X {1034} def
+/Y {530} def
 /anchor (O) def
 bb
 stroke
-/X {417} def
-/Y {124} def
+/X {286} def
+/Y {379} def
 /anchor (O) def
 bb
 stroke
-/X {131} def
-/Y {619} def
-/anchor (F) def
+/X {851} def
+/Y {268} def
+/anchor (Br) def
 bb
 stroke
 CFont
-131 dot 598 dot moveto
-(F) stringwidth pop
+851 dot 247 dot moveto
+(Br) stringwidth pop
 2 div neg 0 rmoveto
 CFont
-131 dot 598 dot moveto
-(F) stringwidth pop
+851 dot 247 dot moveto
+(Br) stringwidth pop
 2 div neg 0 rmoveto
-(F) show
-417 dot 103 dot moveto
+(B) show
+(r) show
+286 dot 358 dot moveto
 (O) stringwidth pop
 2 div neg 0 rmoveto
 CFont
-417 dot 103 dot moveto
+286 dot 358 dot moveto
 (O) stringwidth pop
 2 div neg 0 rmoveto
 (O) show
+1034 dot 509 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+1034 dot 509 dot moveto
+(O) stringwidth pop
+2 div neg 0 rmoveto
+(O) show
+676 dot 159 dot moveto
+(N) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+676 dot 159 dot moveto
+(N) stringwidth pop
+2 div neg 0 rmoveto
+(N) show
+676 dot 159 dot moveto
+(N) stringwidth pop
+2 div neg 12 neg rmoveto
 (H) show
-513 dot 268 dot moveto
-(O) stringwidth pop
+852 dot 568 dot moveto
+(N) stringwidth pop
 2 div neg 0 rmoveto
 CFont
-513 dot 268 dot moveto
-(O) stringwidth pop
+852 dot 568 dot moveto
+(N) stringwidth pop
 2 div neg 0 rmoveto
-(O) show
-227 dot 213 dot moveto
+(N) show
+852 dot 568 dot moveto
+(N) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+(H) stringwidth pop
+neg 0 rmoveto
+(H) show
+994 dot 696 dot moveto
 (C) stringwidth pop
 2 div neg 0 rmoveto
 CFont
-227 dot 213 dot moveto
+994 dot 696 dot moveto
 (C) stringwidth pop
 2 div neg 0 rmoveto
 (C) show
-227 dot 213 dot moveto
+(H) show
+0 fs2 neg dot rmoveto CFontSub
+(3) show
+0 fs2 dot rmoveto CFont
+190 dot 302 dot moveto
+(C) stringwidth pop
+2 div neg 0 rmoveto
+CFont
+190 dot 302 dot moveto
+(C) stringwidth pop
+2 div neg 0 rmoveto
+(C) show
+190 dot 302 dot moveto
 (C) stringwidth pop
 2 div neg 0 rmoveto
 CFontSub
@@ -164,36 +216,38 @@ neg 0 rmoveto
 showpage
 
 % appendix: actual & original XY coordinates ("dots", Angstroms)
-%   atom   1:  131  619   F     2.0000   0.9050 
-%   atom   2:  417  124   O     4.5981  -3.5950 
-%   atom   3:  513  289   O     5.4641  -2.0950 
-%   atom   4:  322  289   C     3.7320  -2.0950 
-%   atom   5:  322  399   C     3.7320  -1.0950 
-%   atom   6:  322  619   C     3.7320   0.9050 
-%   atom   7:  227  454   C     2.8660  -0.5950 
-%   atom   8:  417  454   C     4.5981  -0.5950 
-%   atom   9:  227  564   C     2.8660   0.4050 
-%   atom  10:  417  564   C     4.5981   0.4050 
-%   atom  11:  227  234   C     2.8660  -2.5950 
-%   atom  12:  322  729   C     3.7320   1.9050 
-%   atom  13:  417  234   C     4.5981  -2.5950 
-%   atom  14:  417  784   C     4.5981   2.4050 
-%   atom  15:  227  784   C     2.8660   2.4050 
-%   atom  16:  417  895   C     4.5981   3.4050 
-%   atom  17:  227  895   C     2.8660   3.4050 
-%   atom  18:  322  950   C     3.7320   3.9050 
-%   atom  19:  322  196   H /   3.7320  -2.9450 
-%   atom  20:  167  420   H /   2.3291  -0.9050 
-%   atom  21:  476  420   H /   5.1350  -0.9050 
-%   atom  22:  476  598   H /   5.1350   0.7150 
-%   atom  23:  192  293   H /   2.5560  -2.0581 
-%   atom  24:  167  200   H /   2.3291  -2.9050 
-%   atom  25:  261  175   H /   3.1760  -3.1319 
-%   atom  26:  476  750   H /   5.1350   2.0950 
-%   atom  27:  167  750   H /   2.3291   2.0950 
-%   atom  28:  476  929   H /   5.1350   3.7150 
-%   atom  29:  167  929   H /   2.3291   3.7150 
-%   atom  30:  322 1018   H /   3.7320   4.5250 
-%   atom  31:  476   90   H /   5.1350  -3.9050 
+%   atom   1:  851  268   Br    7.9939  -1.3373 
+%   atom   2:  286  379   O     2.8660  -0.3373 
+%   atom   3: 1034  530   O     9.6565   1.0366 
+%   atom   4:  676  180   N     6.4103  -2.1421 
+%   atom   5:  852  589   N     8.0102   1.5747 
+%   atom   6:  676  357   C     6.4103  -0.5326 
+%   atom   7:  572  323   C     5.4641  -0.8373 
+%   atom   8:  710  462   C     6.7210   0.4179 
+%   atom   9:  572  213   C     5.4641  -1.8373 
+%   atom  10:  740  268   C     6.9939  -1.3373 
+%   atom  11:  818  484   C     7.6995   0.6241 
+%   atom  12:  477  379   C     4.5981  -0.3373 
+%   atom  13:  477  158   C     4.5981  -2.3373 
+%   atom  14:  381  323   C     3.7320  -0.8373 
+%   atom  15:  381  213   C     3.7320  -1.8373 
+%   atom  16:  960  612   C     8.9887   1.7809 
+%   atom  17:  994  717   C     9.2993   2.7314 
+%   atom  18:  190  323   C     2.0000  -0.8373 
+%   atom  19:  708  530   H /   6.7004   1.0376 
+%   atom  20:  643  471   H /   6.1072   0.5053 
+%   atom  21:  820  416   H /   7.7201   0.0045 
+%   atom  22:  886  475   H /   8.3133   0.5368 
+%   atom  23:  697  115   H /   6.6029  -2.7314 
+%   atom  24:  477  447   H /   4.5981   0.2827 
+%   atom  25:  477   90   H /   4.5981  -2.9573 
+%   atom  26:  322  179   H /   3.1951  -2.1473 
+%   atom  27:  807  640   H /   7.5961   2.0361 
+%   atom  28: 1059  695   H /   9.8886   2.5388 
+%   atom  29: 1016  781   H /   9.4919   3.3207 
+%   atom  30:  929  738   H /   8.7100   2.9240 
+%   atom  31:  156  383   H /   1.6900  -0.3004 
+%   atom  32:  131  289   H /   1.4631  -1.1473 
+%   atom  33:  225  264   H /   2.3100  -1.3743 
 % ----------------------end of image------------------------
 

@@ -876,7 +876,7 @@ public class JenaDao {
 		return mono;
 	}
 
-	public void searchDataFromJena(Object obj, ArrayList<Guest> list,
+	public ArrayList<Guest> searchDataFromJena( int method,
 			String sparql) {
 		Dataset dataset = TDBFactory.createDataset(Variables.directory);
 
@@ -891,15 +891,17 @@ public class JenaDao {
 
 		System.out.println("MOlId & DiffSum sparql: " + sparql);
 		
-		Molstat molstat = new Molstat();
-		Molcfp molcfp = new Molcfp();
+		ArrayList<Guest> list = new ArrayList<Guest>();
 		while (results.hasNext()) {
 
 			QuerySolution row = results.next();
 			Guest guest = new Guest();
-			guest.setMolId(row.getLiteral("mol_id").getString());
-			guest.setDiffsum(row.getLiteral("diffsum").getInt());
-			// complexations.add(complexation);
+			if(null != row.getLiteral("mol_id")){
+				guest.setMolId(row.getLiteral("mol_id").getString());
+			}
+			if(null != row.getLiteral("molstat")){
+				guest.setMolstat(row.getLiteral("molstat").getString());
+			}
 			list.add(guest);
 		}
 
@@ -907,6 +909,8 @@ public class JenaDao {
 		ResultSetFormatter.out(System.out, results, query);
 
 		qe.close();
+		
+		return list;
 
 	}
 

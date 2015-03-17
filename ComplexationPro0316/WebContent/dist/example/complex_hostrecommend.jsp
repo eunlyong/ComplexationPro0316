@@ -367,7 +367,7 @@ table {
 				<%
 					String molstruc = "";
 
-					String testfile = "D:\\JavaProNew\\ComplexationPro1\\gueststructure.mol";
+					String testfile = Variables.StructureFile;
 					String struc = "";
 					if (null != request.getParameter("hiddenmol")) {
 						
