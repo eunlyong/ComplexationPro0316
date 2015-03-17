@@ -76,15 +76,18 @@ public class SubmitGuest extends HttpServlet {
 				//ServletContext sctx = getServletContext(); 
 				//获得存放文件的物理路径 
 				//upload下的某个文件夹 得到当前在线的用户 找到对应的文件夹 
-		
-				String path = request.getSession().getServletContext().getRealPath("/"+"File");
+				File guestfiles = new File(request.getSession().getServletContext().getRealPath("/"+"GuestFile"));	
+				if(!guestfiles.exists()){
+					guestfiles.mkdir();
+				}
+				//String path = request.getSession().getServletContext().getRealPath("/"+"File");
 				//获得文件名 
 				fileName = item.getName(); 
 				//System.out.println(fileName); 
 				//该方法在某些平台(操作系统),会返回路径+文件名 
 				fileName = fileName.substring(fileName.lastIndexOf("/")+1); 
-				File file = new File(path +"\\"+fileName); 
-				guestFile = path +"\\"+fileName;
+				File file = new File(guestfiles +"\\"+fileName); 
+				guestFile = guestfiles +"\\"+fileName;
 				System.out.println("Guest File: " + guestFile);
 					//if(!file.exists()){ 
 					item.write(file); 

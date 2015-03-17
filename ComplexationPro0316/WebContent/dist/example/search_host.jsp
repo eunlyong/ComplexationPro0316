@@ -13,6 +13,8 @@
 	+ request.getServerName() + ":" + request.getServerPort()
 	+ path + "/";
 	response.setCharacterEncoding("utf-8");
+	
+	String hostImage = request.getSession().getServletContext().getRealPath("/"+"HostImage");
 %>
 <head>
 <meta charset="utf-8">
@@ -252,7 +254,7 @@ h3 {
 							onClick="gotoHostDetail('<%=basePath%>', '<%=hostName%>')">
 							<div class="col-md-2">
 								<img 
-									src="<%=basePath %>HostImage/<%=host.getHost().replace("-", "") %>.PNG" width="100" height="100"
+									src="<%=hostImage %>/<%=host.getHost().replace("-", "") %>.PNG" width="100" height="100"
 									alt="Generic placeholder image">
 							</div>
 							<div class="col-md-6">

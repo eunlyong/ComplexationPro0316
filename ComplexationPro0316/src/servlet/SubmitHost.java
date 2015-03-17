@@ -79,7 +79,11 @@ public class SubmitHost extends HttpServlet {
 				//ServletContext sctx = getServletContext(); 
 				//获得存放文件的物理路径 
 				//upload下的某个文件夹 得到当前在线的用户 找到对应的文件夹 
-		
+					
+				File hostimage = new File(request.getSession().getServletContext().getRealPath("/"+"HostImage"));	
+				if(!hostimage.exists()){
+					hostimage.mkdir();
+				}
 				//String path = request.getSession().getServletContext().getRealPath("/"+"File");
 				
 				//获得文件名 
@@ -88,9 +92,9 @@ public class SubmitHost extends HttpServlet {
 				//该方法在某些平台(操作系统),会返回路径+文件名 
 				fileName = fileName.substring(fileName.lastIndexOf("/")+1); 
 				
-				image = Variables.HostImagePath +"\\"+fileName;
+				image = hostimage +"\\"+fileName;
 				System.out.println("Image: " + image);
-				File file = new File(Variables.HostImagePath +"\\"+fileName); 
+				File file = new File(hostimage +"\\"+fileName); 
 					if(!file.exists()){ 
 					item.write(file); 
 					//将上传图片的名字记录到数据库中 
@@ -148,7 +152,7 @@ public class SubmitHost extends HttpServlet {
 		String queryString = Variables.prefix + " Insert Data {" + sparqlpart1  + sparqlpart2 + " }" ;
 	
 		JenaDao dao = new JenaDao();
-		dao.insertDataIntoJena(queryString);
+		//dao.insertDataIntoJena(queryString);
 		
 	}
 

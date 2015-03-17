@@ -22,6 +22,9 @@
 	//model.enterCriticalSection(Lock.Write);
 	// Create a new query
 	Dao dao = new Dao();
+	
+	String complexationImage = request.getSession().getServletContext().getRealPath("/"+"ComplexationImage");
+	
 %>
 <head>
 <meta charset="utf-8">
@@ -207,7 +210,7 @@ table {
 							onClick="gotoComplexationDetail('<%=comp%>')">
 							<div class="col-md-2">
 								<img 
-									src="<%=basePath %>ComplexationImage/<%=complexation.getNmrSpectrum() %>.png" width="100" height="100"
+									src="<%=complexationImage %>/<%=complexation.getNmrSpectrum() %>.png" width="100" height="100"
 									alt="Generic placeholder image">
 							</div>
 							<div class="col-md-6">

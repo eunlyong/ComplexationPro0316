@@ -15,6 +15,8 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 	response.setCharacterEncoding("utf-8");
+	
+	String guestImage = request.getSession().getServletContext().getRealPath("/"+"GuestImage");
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -64,7 +66,7 @@
 							<td><%=guest.getMolId() %></td>
 							
 							<td colspan="2" rowspan="3"><img
-								src="<%=basePath %>GuestImage/<%=guest.getMolId()%>.png"
+								src="<%=guestImage %>/<%=guest.getMolId()%>.png"
 								width=150 height=120 /></td>
 						</tr>
 						<tr>

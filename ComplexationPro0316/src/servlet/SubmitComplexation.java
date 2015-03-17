@@ -76,7 +76,11 @@ public class SubmitComplexation extends HttpServlet {
 				//ServletContext sctx = getServletContext(); 
 				//获得存放文件的物理路径 
 				//upload下的某个文件夹 得到当前在线的用户 找到对应的文件夹 
-		
+				
+				File complexationimage = new File(request.getSession().getServletContext().getRealPath("/"+"ComplexationImage"));	
+				if(!complexationimage.exists()){
+					complexationimage.mkdir();
+				}
 				//String path = request.getSession().getServletContext().getRealPath("/"+"File");
 				
 				//获得文件名 
@@ -85,9 +89,9 @@ public class SubmitComplexation extends HttpServlet {
 				//该方法在某些平台(操作系统),会返回路径+文件名 
 				fileName = fileName.substring(fileName.lastIndexOf("/")+1); 
 				//String fileName = 
-				image = Variables.ComplexationImagePath +"\\"+fileName;
+				image = complexationimage +"\\"+fileName;
 				System.out.println("Image: " + image);
-				File file = new File(Variables.ComplexationImagePath +"\\"+fileName); 
+				File file = new File(complexationimage +"\\"+fileName); 
 					if(!file.exists()){ 
 					item.write(file); 
 					//将上传图片的名字记录到数据库中 

@@ -15,6 +15,8 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 	response.setCharacterEncoding("utf-8");
+	
+	String guestImage = request.getSession().getServletContext().getRealPath("/"+"GuestImage");
 %>
 <head>
 <meta charset="utf-8">
@@ -155,7 +157,7 @@ h4 {
 							<div class="col-md-2">
 
 								<img
-									src="<%=basePath %>GuestImage/<%=guest.getMolId()%>.png"
+									src="<%=guestImage %>/<%=guest.getMolId()%>.png"
 									width=150 height=120 alt="Generic placeholder image" />
 							</div>
 							<div class="col-md-6">

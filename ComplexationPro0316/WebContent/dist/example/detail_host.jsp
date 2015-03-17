@@ -15,6 +15,8 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 	response.setCharacterEncoding("utf-8");
+	
+	String hostImage = request.getSession().getServletContext().getRealPath("/"+"HostImage");
 %>
 <head>
 <meta charset="utf-8">
@@ -125,7 +127,7 @@
 						<tr>
 							<td colspan="4">
 							<img 
-						src="<%=basePath %>HostImage/<%=hostName.replace("-", "") %>.PNG" width="100" height="100"
+						src="<%=hostImage %>/<%=hostName.replace("-", "") %>.PNG" width="100" height="100"
 						alt="Generic placeholder image">
 							</td>
 						</tr>

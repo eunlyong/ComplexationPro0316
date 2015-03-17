@@ -4,7 +4,6 @@ import java.io.*;
 
 import org.openbabel.*;
 
-import model.OpenBabelConvert;
 
 public class AssistToolDao {
 	Runtime rt = Runtime.getRuntime();
@@ -90,11 +89,14 @@ public class AssistToolDao {
 		
 		return readline;
 	}
-	public void phostscriptChangeToImage(String imageName, String file) throws IOException, InterruptedException{
-		
+	public void phostscriptChangeToImage(String filelocation, String imageName, String file) throws IOException, InterruptedException{
+		File guestimage = new File(filelocation + "/"+"GuestImage");	
+		if(!guestimage.exists()){
+			guestimage.mkdir();
+		}
 		Process pr = rt
 				.exec( Variables.ToolLocationPath + "gs9.15\\bin\\gswin64 -dSAFER -q -dBATCH -dNOPAUSE -g1000x1000 -r400 "
-						+ " -sDEVICE=png16m  -sOutputFile=" + Variables.UsedFilePath + "GuestImage/"
+						+ " -sDEVICE=png16m  -sOutputFile=" + guestimage + "GuestImage/"
 						+ imageName + ".png " + file);
 		pr.waitFor();
 	}

@@ -532,7 +532,7 @@ public class Dao {
 		writer4.println(readline);
 		writer4.close();
 
-		createGuestStructureInPNG(guest_structurefile, guestid);
+		createGuestStructureInPNG(guestFile, guest_structurefile, guestid);
 
 		// insert structure info into molfgb & molstat & molcfp
 
@@ -699,7 +699,7 @@ public class Dao {
 		writer4.println(readline);
 		writer4.close();
 
-		createGuestStructureInPNG(guest_structurefile, guestid);
+		createGuestStructureInPNG(guestFile, guest_structurefile, guestid);
 
 		// insert structure info into molfgb & molstat & molcfp
 
@@ -792,8 +792,10 @@ public class Dao {
 		//jena.insertDataIntoJena(insert_sparql);
 	}
 
-	public void createGuestStructureInPNG(String guestfile, String molid)
+	public void createGuestStructureInPNG(String guestimageLocation, String guestfile, String molid)
 			throws IOException, InterruptedException {
+		
+		
 		String createimagefile = Variables.UsedFilePath + "createimage.mol";
 
 		String readline = "";
@@ -802,8 +804,8 @@ public class Dao {
 		PrintWriter writer = new PrintWriter(createimagefile, "UTF-8");
 		writer.println(readline);
 		writer.close();
-
-		tool.phostscriptChangeToImage(molid, createimagefile);
+		guestimageLocation = guestimageLocation.substring(0, guestimageLocation.substring(0, guestimageLocation.lastIndexOf("\\")).lastIndexOf("\\"));
+		tool.phostscriptChangeToImage(guestimageLocation, molid, createimagefile);
 
 	}
 
